@@ -1,11 +1,8 @@
-export  async function Anime(anime, nomeAnime) {
-    const comando=
-    `select ID_ANIME      id,
-    NM_ANIME        nome
-    FROM TB_ANIME
-    WHERE ID_ANIME  = ?
-    AND NM_ANIME = ?`
+create database Anime;
+use Anime;
 
-    const resp = con.query(comando, [id, nome])
-}
 
+create table tb_Anime (
+	id_anime     int primary key auto_increment,
+	nm_anime        varchar(100)
+    );

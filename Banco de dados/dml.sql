@@ -1,11 +1,12 @@
-import { con } from '.connection.js'
 
-export function Anime(anime,nomeAnime) {
-    const comando=
-    `select ID_ANIME      id,
-    NM_ANIME        nome
-    FROM TB_ANIME
-    WHERE ID_ANIME  = '1'
-    AND NM_ANIME = 'Naruto'`
+--Inserir novo anime
+use Anime;
 
-}
+
+insert into tb_Anime 
+    (id_anime,nm_animes)
+    values(1,'Naruto');
+
+
+
+select * from tb_Anime;
