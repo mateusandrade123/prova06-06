@@ -2,7 +2,7 @@ import { con } from "./connection.js";
 
 export async function inserirAnime(anime) {
     const comando = 
-    `insert into tb_Anime (id_anime,nm_animes)
+    `insert into tb_Anime (id_anime,nm_anime)
         values(?,?)`
     const [resposta] = await con.query(comando, [anime.usuario, anime.anime]);
     anime.id = resposta.insertId;

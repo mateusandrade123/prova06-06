@@ -9,7 +9,7 @@ export default function Cadastrar(){
 
     async function salvarClick() {
         try {
-          const r = await cadastrarAnime(anime)
+          const r =await cadastrarAnime(anime)
           ;  
 
           alert('Seu anime foi cadastrado!!');
@@ -17,6 +17,7 @@ export default function Cadastrar(){
         } catch (err) {
             alert(err.message);
         }
+        
        
     }
 
