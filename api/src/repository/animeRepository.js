@@ -4,7 +4,7 @@ export async function inserirAnime(anime) {
     const comando = 
     `insert into tb_Anime (id_anime,nm_animes)
         values(?,?)`
-    const [resposta] = await con.query(comando, [anime.usuario, anime.nome]);
+    const [resposta] = await con.query(comando, [anime.usuario, anime.anime]);
     anime.id = resposta.insertId;
 
     return anime;

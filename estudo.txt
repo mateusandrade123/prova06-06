@@ -1,3 +1,27 @@
+//corpo para inserirAnime (POST)//
+{
+    "anime":"Pókemon" 
+}
+
+
+//conteudo para colocar no arquivo .env//
+PORT=5000
+
+MYSQL_HOST=127.0.0.1
+MYSQL_USER=root
+MYSQL_PWD=1234
+MYSQL_DB=Anime
+
+
+//CONSELHO, COLOCA MAIS ALGUMA COISA PARA ESCREVER NA PARTE DE CADASTRAR UM ANIME
+
+EX:
+"DESCRIÇÃO": ""
+
+**TEM QUE MUDAR NO MYSQL TAMBÉM***
+//
+
+
 export  async function Anime(anime, nomeAnime) {
     const comando=
     `select ID_ANIME      id,
@@ -26,3 +50,4 @@ export function Anime(anime,nomeAnime) {
     AND NM_ANIME = 'Naruto'`
 
 }
+

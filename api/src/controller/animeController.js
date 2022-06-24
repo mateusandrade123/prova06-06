@@ -5,7 +5,7 @@ import { Router } from 'express'
 
 const server = Router();
 
-server.post('/anime', async (req, resp) => {
+server.post('/inserirAnime', async (req, resp) => {
     try {
         const novoAnime = req.body;
 
@@ -20,7 +20,7 @@ server.post('/anime', async (req, resp) => {
     }
 })
 
-server.get('/animes', async (req, resp) => {
+server.get('/todosAnimes', async (req, resp) => {
     try {
         const resposta = await listarTodosAnimes();
         resp.send(resposta);

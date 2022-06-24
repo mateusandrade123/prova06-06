@@ -1,13 +1,25 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
+import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-import './index.scss'
+import './index.css';
 
-import Routes from './routes'
+
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+
+import Home from './pages/anime/home'
+import CadastrarAnime from './pages/cadastrarAnime/cadastro'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Routes />
-  </React.StrictMode>
-)
+    <React.StrictMode>
+        <BrowserRouter>
+            <Routes>
+                <Route path = '/' element ={<Home />} />
+                <Route path = '/cadastrarAnime' element ={<CadastrarAnime />} />
+
+            </Routes>
+        </BrowserRouter>
+    </React.StrictMode>
+);
